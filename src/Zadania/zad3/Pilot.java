@@ -20,7 +20,7 @@ public class Pilot {
        funkcje wlacz = new funkcje();
        funkcje glos = new funkcje();
        Scanner scanner = new Scanner (System.in);
-       //asdsadasd
+
 int dupa =0;
 System.out.print("czy chcesz uruchomić pilota? (true/false): ");
        wlacz.setOnOff(scanner.nextBoolean());
