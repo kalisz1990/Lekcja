@@ -3,11 +3,13 @@ import java.util.Scanner;
 
 public class Karta {
     private int pin = 1234;
-    public int stanKata;
-    private int ile;
+    public int stanKonta = 2000;
 
     Scanner scanner = new Scanner(System.in);
-
+    public Karta(){}
+    public Karta(int newPin){
+        pin = newPin;
+    }
     public boolean getPin() {
         int pin2;
         boolean exit = true;
@@ -31,18 +33,17 @@ public class Karta {
     }
 
     public void getStanKata(){
-        System.out.println("Stan kąta: "+ stanKata+" zl"+"\n");
+        System.out.println("Stan kąta: "+ stanKonta +" zl"+"\n");
     }
 
-    public int getIle() {
+    public void getIle() {
 
         System.out.print("Ile chcesz wyplacic, podaj liczbe: ");
-        ile = scanner.nextInt();
-        stanKata -=ile;
-        ile=0;
+        int ile = scanner.nextInt();
+        stanKonta -=ile;
         getStanKata();
 
-        return stanKata;
+        return ;
 
     }
     }

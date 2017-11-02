@@ -4,6 +4,8 @@ package Zadania.zad2;
 
 import jdk.nashorn.internal.ir.WhileNode;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Bankomat {
@@ -16,9 +18,8 @@ public class Bankomat {
 
         // czy karta jest włożona boolean do zrobienia
 
-        Karta card = new Karta();
-        Karta stan = new Karta();
-        Karta wypl = new Karta();
+        Karta card = new Karta(654);
+
 
 if (card.getPin()) {
     for(;;){
@@ -34,10 +35,10 @@ if (card.getPin()) {
 
         switch (wybor) {
             case 1:
-                stan.getStanKata();
+                card.getStanKata();
                 break;
             case 2:
-                wypl.getIle();
+                card.getIle();
                 break;
             default:
             System.out.print("Zly wybor, wybierz ponownie.");

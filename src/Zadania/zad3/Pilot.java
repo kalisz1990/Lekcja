@@ -21,7 +21,6 @@ public class Pilot {
        funkcje glos = new funkcje();
        Scanner scanner = new Scanner (System.in);
 
-int dupa =0;
 System.out.print("czy chcesz uruchomić pilota? (true/false): ");
        wlacz.setOnOff(scanner.nextBoolean());
        //while(ge)
