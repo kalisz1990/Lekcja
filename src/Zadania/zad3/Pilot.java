@@ -9,26 +9,64 @@ package Zadania.zad3;
         UWAGA! Przypominam, że do porównywania tekstu używamy metody equals.
         */
 
+import java.awt.*;
 import java.util.Scanner;
 
 public class Pilot {
 
-    public static void main (String []args){
-       int [] przyciski = {1,2,3,4,5,6,7,8,9};
-       boolean off;
+    public static void main(String[] args) {
+        Scanner guzik = new Scanner(System.in);
+        TV Sony = new TV();
 
-       funkcje wlacz = new funkcje();
-       funkcje glos = new funkcje();
-       Scanner scanner = new Scanner (System.in);
+        System.out.print("wcisnij O by uruchomić TV: ");
+        String on = guzik.next();
 
-System.out.print("czy chcesz uruchomić pilota? (true/false): ");
-       wlacz.setOnOff(scanner.nextBoolean());
-       //while(ge)
-       System.out.println("glosniej/ciszej (up/down): ");
-       glos.setGlosnosc(scanner.next());
+        if ((on.equals("o")) || (on.equals("O"))) {
+            Sony.isOn = false;
+            Sony.zmianaIsOn();
+        } else
+            System.out.println(Sony.zmianaIsOn());
 
+                System.out.println("Wcisnij guzik: \n" +
+                        "Programy: 1,2,3,4,5,6,7,8,9\n" +
+                        "Głosność: +,- \n" +
+                        "Zmiana kanału w tyl/przod: p,n\n" +
+                        "Wyłącz TV: O\n");
 
+                while (Sony.isOn) {
 
+                String button = guzik.next();
+                switch (button) {
+                    case "1":
+                    case "2":
+                    case "3":
+                    case "4":
+                    case "5":
+                    case "6":
+                    case "7":
+                    case "8":
+                    case "9":
+                        System.out.println(Sony.zmienKanal(button));
+                        break;
+                    case "+":
+                        System.out.println(Sony.zmienGlosnosc(1));
+                        break;
+                    case "-":
+                        System.out.println(Sony.zmienGlosnosc(-1));
+                        break;
+                    case "o":
+                    case "O":
+                        System.out.println(Sony.zmianaIsOn());
+                        break;
+                    case "n":
+                    case "p":
+                        System.out.println();
+                        break;
+                    default:
+                        System.out.println("zły przycisk");
+                        break;
+                }
 
+                }
     }
 }
