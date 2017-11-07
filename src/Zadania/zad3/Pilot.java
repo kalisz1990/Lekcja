@@ -60,6 +60,7 @@ public class Pilot {
                         break;
                     case "n":
                     case "p":
+                        //asdasd
                         System.out.println();
                         break;
                     default:
