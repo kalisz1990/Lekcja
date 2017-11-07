@@ -46,7 +46,8 @@ public class Pilot {
                     case "7":
                     case "8":
                     case "9":
-                        System.out.println(Sony.zmienKanal(button));
+                        Sony.kanal = Integer.parseInt(button);
+                        System.out.println(Sony.zmienKanal(Sony.kanal));
                         break;
                     case "+":
                         System.out.println(Sony.zmienGlosnosc(1));
@@ -59,9 +60,10 @@ public class Pilot {
                         System.out.println(Sony.zmianaIsOn());
                         break;
                     case "n":
+                        System.out.println(Sony.zmienKanal(Sony.kanal +1));
+                        break;
                     case "p":
-                        //asdasd
-                        System.out.println();
+                        System.out.println(Sony.zmienKanal(Sony.kanal -1));
                         break;
                     default:
                         System.out.println("zły przycisk");

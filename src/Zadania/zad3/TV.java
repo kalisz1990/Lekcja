@@ -5,7 +5,10 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 public class TV {
 
     Boolean isOn;
-    String kanal;
+    int kanal = 1;
+    int kanalMax = 9;
+    int kanalMin = 1;
+
     int glosnosc = 8;
     int maxGlosc = 15;
     int minGlosc = 0;
@@ -18,9 +21,10 @@ public class TV {
     return "Aktualna glosnosc to: "+glosnosc;
     }
 
-    public String zmienKanal(String zmiana){
+    public String zmienKanal(int zmiana){
         if(isOn==false)
             return "TV is off";
+        if (zmiana>= kanalMin && zmiana<= kanalMax)
         kanal = zmiana;
         return "Aktualny kanał: "+kanal;
     }
