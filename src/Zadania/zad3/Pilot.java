@@ -22,7 +22,6 @@ public class Pilot {
         String on = guzik.next();
 
         if ((on.equals("o")) || (on.equals("O"))) {
-            Sony.isOn = false;
             Sony.zmianaIsOn();
         } else
             System.out.println(Sony.zmianaIsOn());

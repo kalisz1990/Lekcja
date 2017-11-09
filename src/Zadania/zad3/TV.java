@@ -4,7 +4,7 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 
 public class TV {
 
-    Boolean isOn;
+    Boolean isOn=false;
     int kanal = 1;
     int kanalMax = 9;
     int kanalMin = 1;
